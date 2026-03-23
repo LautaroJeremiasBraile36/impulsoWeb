@@ -17,7 +17,7 @@ export default function SobreMi() {
           {/* Foto */}
           <div className="sobre-image-wrap reveal">
             <div className="sobre-image">
-              <img src="/src/assets/logo-png.png" alt="Impulso Web" />
+              <img src="/public/img/logo.webp" alt="Impulso Web" />
               {/* <div className="sobre-image-placeholder">👤</div> */}
             </div>
             <div className="sobre-accent-line" />
