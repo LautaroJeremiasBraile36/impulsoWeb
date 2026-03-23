@@ -39,7 +39,7 @@ export default function Servicios() {
           <span className="section-tag reveal">Incluido en cada proyecto</span>
           <h2 className="reveal reveal-delay-1">¿Qué recibís?</h2>
           <p className="reveal reveal-delay-2">
-            Cada landing que desarrollo incluye todo lo necesario para convertir desde el día uno.
+            Cada landing que desarrollamos incluye todo lo necesario para convertir desde el día uno.
           </p>
         </div>
 

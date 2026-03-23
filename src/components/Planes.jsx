@@ -2,7 +2,7 @@ const planes = [
   {
     name: "Básico",
     tagline: "Para tener presencia online",
-    price: "$150",
+    price: "$119",
     currency: "USD · pago único",
     badge: null,
     features: [
@@ -19,7 +19,7 @@ const planes = [
   {
     name: "Pro",
     tagline: "Landing pensada para generar clientes",
-    price: "$280",
+    price: "$179",
     currency: "USD · pago único",
     badge: "Más elegido",
     features: [
@@ -36,7 +36,7 @@ const planes = [
   {
     name: "Premium",
     tagline: "Sistema completo de ventas online",
-    price: "$450",
+    price: "$399",
     currency: "USD · pago único",
     badge: null,
     features: [
@@ -92,7 +92,7 @@ export default function Planes() {
               </ul>
 
               <a
-                href={`https://wa.me/549XXXXXXXXXX?text=Hola%2C%20quiero%20el%20plan%20${plan.name}`}
+                href={`https://wa.me/5491131096630?text=Hola%2C%20quiero%20el%20plan%20${plan.name}`}
                 className={`btn ${plan.badge ? "" : "btn-outline"}`}
                 style={{ width: "100%", justifyContent: "center" }}
               >

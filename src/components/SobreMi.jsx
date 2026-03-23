@@ -18,8 +18,8 @@ export default function SobreMi() {
           <div className="sobre-image-wrap reveal">
             <div className="sobre-image">
               <img
-                src="/src/assets/Screenshot_22.png"
-                alt="Tu nombre"
+                src="/src/assets/ideogram-v3.0_Futuristic_tech_logo_for_Impulso_Web_with_dynamic_arrow_and_motion_effect._Bold_-0.jpg"
+                alt="Impulso Web"
               />
               {/* <div className="sobre-image-placeholder">👤</div> */}
             </div>
@@ -29,22 +29,22 @@ export default function SobreMi() {
           {/* Texto */}
           <div className="sobre-text">
             <span className="section-tag reveal">
-              Quién está detrás
+              Quienes están detrás
             </span>
-            <h2 className="reveal reveal-delay-1">Sobre mí</h2>
+            <h2 className="reveal reveal-delay-1">Sobre nosotros</h2>
             <span className="sobre-role reveal reveal-delay-2">
-              Desarrollador web · Diseñador · Acompañante terapéutico
+              Desarrollo web · Diseño · Copywrite
             </span>
 
             <p className="reveal reveal-delay-2">
-              Soy una persona que combina el mundo técnico con una
-              mirada humana. Entiendo que tu negocio no es solo código
+              Somos un equipo que combina el mundo técnico con una
+              mirada humana. Entendemos que tu negocio no es solo un producto
               — es un proyecto de vida. Por eso diseño páginas que no
               solo se ven bien, sino que conectan con tu audiencia de
               verdad.
             </p>
             <p className="reveal reveal-delay-3">
-              Mi formación en acompañamiento terapéutico me enseñó a
+              Tenemos formación en acompañamiento terapéutico lo que nos enseñó a
               escuchar antes de actuar. Eso se traduce en un proceso
               donde tus necesidades están en el centro de cada
               decisión de diseño.

@@ -35,13 +35,13 @@ export default function Hero() {
         </h1>
 
         <p className="hero-subtitle">
-          Desarrollo landing pages pensadas para que tu negocio genere más
+          Desarrollamos landing pages pensadas para que tu negocio genere más
           consultas sin depender solo de redes sociales.
         </p>
 
         <div className="hero-cta-group">
           <a
-            href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20quiero%20más%20info%20sobre%20las%20landing%20pages"
+            href="https://wa.me/5491131096630?text=Hola%2C%20quiero%20más%20info%20sobre%20las%20landing%20pages"
             className="btn"
           >
             Quiero más clientes

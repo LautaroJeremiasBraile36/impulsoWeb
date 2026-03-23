@@ -22,7 +22,7 @@ export default function Solucion() {
 
             <div className="solucion-stat-row reveal reveal-delay-4">
               <div className="solucion-stat">
-                <strong>3x</strong>
+                <strong>x3</strong>
                 <span>más consultas</span>
               </div>
               <div className="solucion-stat">
