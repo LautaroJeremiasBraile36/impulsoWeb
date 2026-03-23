@@ -17,10 +17,7 @@ export default function SobreMi() {
           {/* Foto */}
           <div className="sobre-image-wrap reveal">
             <div className="sobre-image">
-              <img
-                src="/src/assets/ideogram-v3.0_Futuristic_tech_logo_for_Impulso_Web_with_dynamic_arrow_and_motion_effect._Bold_-0.jpg"
-                alt="Impulso Web"
-              />
+              <img src="/src/assets/logo.webp" alt="Impulso Web" />
               {/* <div className="sobre-image-placeholder">👤</div> */}
             </div>
             <div className="sobre-accent-line" />
@@ -38,16 +35,16 @@ export default function SobreMi() {
 
             <p className="reveal reveal-delay-2">
               Somos un equipo que combina el mundo técnico con una
-              mirada humana. Entendemos que tu negocio no es solo un producto
-              — es un proyecto de vida. Por eso diseño páginas que no
-              solo se ven bien, sino que conectan con tu audiencia de
-              verdad.
+              mirada humana. Entendemos que tu negocio no es solo un
+              producto — es un proyecto de vida. Por eso diseño
+              páginas que no solo se ven bien, sino que conectan con
+              tu audiencia de verdad.
             </p>
             <p className="reveal reveal-delay-3">
-              Tenemos formación en acompañamiento terapéutico lo que nos enseñó a
-              escuchar antes de actuar. Eso se traduce en un proceso
-              donde tus necesidades están en el centro de cada
-              decisión de diseño.
+              Tenemos formación en acompañamiento terapéutico lo que
+              nos enseñó a escuchar antes de actuar. Eso se traduce en
+              un proceso donde tus necesidades están en el centro de
+              cada decisión de diseño.
             </p>
 
             <div className="sobre-skills reveal reveal-delay-4">
