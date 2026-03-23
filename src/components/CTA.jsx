@@ -15,11 +15,11 @@ export default function CTA() {
 
         <div className="reveal reveal-delay-3">
           <a
-            href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20quiero%20más%20info%20sobre%20las%20landing%20pages"
+            href="https://wa.me/5491131096630?text=Hola%2C%20quiero%20más%20info%20sobre%20las%20landing%20pages"
             className="btn"
             style={{ fontSize: "1.1rem", padding: "16px 40px" }}
           >
-            Escribime por WhatsApp →
+            Escribinos por WhatsApp y cambialo todo →
           </a>
         </div>
 
