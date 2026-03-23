@@ -18,7 +18,7 @@ export default function SobreMi() {
           <div className="sobre-image-wrap reveal">
             <div className="sobre-image">
               <img
-                src="/src/assets/Screenshot_23.png"
+                src="/src/assets/Screenshot_22.png"
                 alt="Tu nombre"
               />
               {/* <div className="sobre-image-placeholder">👤</div> */}
