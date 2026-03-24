@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:3000";
 const INITIAL_STATE = {
   nombre: "",
   email: "",
@@ -19,11 +20,12 @@ export default function Formulario() {
   // ── Validación ──────────────────────────────────────────────────────────
   const validate = () => {
     const e = {};
-    if (!form.nombre.trim())              e.nombre   = "Tu nombre es requerido.";
-    if (!form.email.trim())               e.email    = "El email es requerido.";
-    else if (!/\S+@\S+\.\S+/.test(form.email)) e.email = "Email inválido.";
-    if (!form.negocio.trim())             e.negocio  = "Contanos de tu negocio.";
-    if (!form.plan)                       e.plan     = "Elegí un plan.";
+    if (!form.nombre.trim()) e.nombre = "Tu nombre es requerido.";
+    if (!form.email.trim()) e.email = "El email es requerido.";
+    else if (!/\S+@\S+\.\S+/.test(form.email))
+      e.email = "Email inválido.";
+    if (!form.negocio.trim()) e.negocio = "Contanos de tu negocio.";
+    if (!form.plan) e.plan = "Elegí un plan.";
     return e;
   };
 
@@ -45,21 +47,21 @@ export default function Formulario() {
     setStatus("loading");
 
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_API_URL || "http://localhost:4000"}/api/contacto`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form),
-        }
-      );
-
-      if (!res.ok) throw new Error("Error del servidor");
+      const res = await fetch(`${API_URL}/api/contacto`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Error del servidor");
+      }
 
       setStatus("success");
       setForm(INITIAL_STATE);
-    } catch {
+    } catch (err) {
       setStatus("error");
+      console.error(err.message);
     }
   };
 
@@ -69,10 +71,12 @@ export default function Formulario() {
       <div className="section-inner">
         <div className="section-header">
           <span className="section-tag reveal">Contacto</span>
-          <h2 className="reveal reveal-delay-1">Empecemos a trabajar</h2>
+          <h2 className="reveal reveal-delay-1">
+            Empecemos a trabajar
+          </h2>
           <p className="reveal reveal-delay-2">
-            Completá el formulario y te respondo en menos de 24 hs con una
-            propuesta personalizada.
+            Completá el formulario y te respondo en menos de 24 hs con
+            una propuesta personalizada.
           </p>
         </div>
 
@@ -83,7 +87,8 @@ export default function Formulario() {
               <div className="form-success-icon">✅</div>
               <h3>¡Mensaje enviado!</h3>
               <p>
-                Gracias <strong>{form.nombre || "por escribirme"}</strong>. Te
+                Gracias{" "}
+                <strong>{form.nombre || "por escribirme"}</strong>. Te
                 contacto en las próximas 24 hs.
               </p>
               <button
@@ -94,7 +99,11 @@ export default function Formulario() {
               </button>
             </div>
           ) : (
-            <form className="formulario" onSubmit={handleSubmit} noValidate>
+            <form
+              className="formulario"
+              onSubmit={handleSubmit}
+              noValidate
+            >
               {/* Fila 1 */}
               <div className="form-row">
                 <div className="form-group">
@@ -112,7 +121,9 @@ export default function Formulario() {
                     autoComplete="name"
                   />
                   {errors.nombre && (
-                    <span className="form-error-msg">{errors.nombre}</span>
+                    <span className="form-error-msg">
+                      {errors.nombre}
+                    </span>
                   )}
                 </div>
 
@@ -131,7 +142,9 @@ export default function Formulario() {
                     autoComplete="email"
                   />
                   {errors.email && (
-                    <span className="form-error-msg">{errors.email}</span>
+                    <span className="form-error-msg">
+                      {errors.email}
+                    </span>
                   )}
                 </div>
               </div>
@@ -153,7 +166,8 @@ export default function Formulario() {
 
                 <div className="form-group">
                   <label htmlFor="plan">
-                    Plan de interés <span className="form-required">*</span>
+                    Plan de interés{" "}
+                    <span className="form-required">*</span>
                   </label>
                   <select
                     id="plan"
@@ -172,7 +186,9 @@ export default function Formulario() {
                     ))}
                   </select>
                   {errors.plan && (
-                    <span className="form-error-msg">{errors.plan}</span>
+                    <span className="form-error-msg">
+                      {errors.plan}
+                    </span>
                   )}
                 </div>
               </div>
@@ -193,13 +209,17 @@ export default function Formulario() {
                   className={errors.negocio ? "input-error" : ""}
                 />
                 {errors.negocio && (
-                  <span className="form-error-msg">{errors.negocio}</span>
+                  <span className="form-error-msg">
+                    {errors.negocio}
+                  </span>
                 )}
               </div>
 
               {/* Fila 4 */}
               <div className="form-group">
-                <label htmlFor="mensaje">¿Algo más que quieras contarme?</label>
+                <label htmlFor="mensaje">
+                  ¿Algo más que quieras contarme?
+                </label>
                 <textarea
                   id="mensaje"
                   name="mensaje"
@@ -213,8 +233,8 @@ export default function Formulario() {
               {/* Error global */}
               {status === "error" && (
                 <div className="form-global-error">
-                  ⚠️ Hubo un problema al enviar. Intentá de nuevo o escribime
-                  directamente por WhatsApp.
+                  ⚠️ Hubo un problema al enviar. Intentá de nuevo o
+                  escribime directamente por WhatsApp.
                 </div>
               )}
 
